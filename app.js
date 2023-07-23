@@ -9,7 +9,8 @@ function createList() {
 }
 
 // Function to add list or task to the list container
-function addTask() {
+function addTask(e) {
+  e.preventDefault();
   if (inputTitle.value === "") {
     alert("Please write something in the title");
   } else {
