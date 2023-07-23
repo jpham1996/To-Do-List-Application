@@ -1,5 +1,5 @@
 const inputTitle = document.querySelector("#inputTitle");
-const addButton = document.querySelector("#addButton");
+const form = document.querySelector(".to-do-container");
 const listContainer = document.querySelector("#list-container");
 
 // Function to create the list element <li></li> using javascript and innerHTML
@@ -35,7 +35,7 @@ function showList() {
 // Call showList function
 showList();
 
-addButton.addEventListener("click", addTask);
+form.addEventListener("submit", addTask);
 
 // addEventListener that targets the "LI" or "SPAN" element if clicked on.
 listContainer.addEventListener("click", function (e) {
