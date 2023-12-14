@@ -7,11 +7,14 @@ html {
   box-sizing: border-box;
 }
 
+span {
+  margin-left: 10px;
+}
+
 .picture {
   position: relative;
   top: 5px;
   height: 30px;
-  left: 5px;
 }
 
 h1 {
@@ -26,6 +29,10 @@ h1 {
 .row {
   display: flex;
   justify-content: center;
+}
+
+.errorMessageText {
+  font-weight: bold;
 }
 
 .to-do-container input {
@@ -91,10 +98,9 @@ ul li.checked::before {
 ul li span.close {
   position: absolute;
   right: -45px;
-  top: 5px;
+  top: 0px;
   width: 40px;
-  height: 40px;
-  font-size: 1.375rem;
+  height: 43px;
   color: #555;
   line-height: 2.52em;
   border-radius: 50%;

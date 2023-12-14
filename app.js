@@ -1,24 +1,25 @@
-const inputTitle = document.querySelector("#inputTitle");
+const inputTask = document.querySelector("#inputTask");
 const form = document.querySelector(".to-do-container");
 const listContainer = document.querySelector("#list-container");
+const errorMessageText = document.querySelector(".errorMessageText");
 
 // Function to create the list element <li></li> using javascript and innerHTML
 function createList() {
-  const createList = `<div class="li-flex"><li>${inputTitle.value}  <span class="close">&times</span></li></div>`;
+  const createList = `<div class="li-flex"><li>${inputTask.value}  <span class="close">&times</span></li></div>`;
   listContainer.insertAdjacentHTML("beforeend", createList);
 }
 
 // Function to add list or task to the list container
 function addTask(e) {
   e.preventDefault();
-  if (inputTitle.value === "") {
-    alert("Please write something in the title");
+  if (inputTask.value === "") {
+    errorMessageText.innerText = "Please write a task!";
   } else {
+    errorMessageText.innerText = "";
     createList();
   }
 
-  // After list is added and save to local storage
-
+  // After new task is added and save to local storage
   inputTitle.value = "";
   saveTask();
 }

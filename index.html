@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List Application</title>
+    <title>To Do List App</title>
     <link rel="stylesheet" href="app.css" type="text/css" />
   </head>
   <body>
     <h1>
-      To Do List Application<span
+      To Do List App<span
         ><img class="picture" src="./img/to-do-list.png" alt="to-do-list"
       /></span>
     </h1>
     <form class="to-do-container">
       <div class="row">
-        <input id="inputTitle" type="text" placeholder="Add a new task" />
-        <button id="addButton" type="click">&plus;</button>
+        <input id="inputTask" type="text" placeholder="Add a new task" />
+        <button id="addButton">&plus;</button>
       </div>
+      <p class="errorMessageText"></p>
     </form>
+
     <ul id="list-container"></ul>
     <script src="app.js"></script>
   </body>
