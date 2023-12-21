@@ -1,20 +1,11 @@
-html {
-  min-height: 100vh;
-}
-
-* {
-  font-family: "Times New Roman", Arial;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-span {
-  margin-left: 10px;
-}
-
-.picture {
-  position: relative;
-  top: 5px;
-  height: 30px;
+body {
+  font-family: "Times New Roman", Arial;
 }
 
 h1 {
@@ -46,24 +37,19 @@ h1 {
   padding-right: 1.5em;
   cursor: pointer;
   font-size: 1.5rem;
-}
-
-.li-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #0d75ec;
+  border: none;
+  font-weight: 500;
 }
 
 ul {
   padding: 0;
 }
 
-ul li {
+li {
   list-style: none;
   font-size: 1.25rem;
   padding: 0.75em 0.75em 0.75em 0.75em;
-  cursor: pointer;
   position: relative;
   width: 50%;
   margin: 0 auto;
@@ -72,40 +58,72 @@ ul li {
   text-align: center;
 }
 
-ul li::before {
+/* .check {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  top: 12px;
+  left: -45px;
+  cursor: pointer;
+}
+
+.checked {
+  color: #555;
+  text-decoration: line-through;
+} */
+
+li::before {
   content: "";
   position: absolute;
-  height: 25px;
-  width: 25px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
   background-image: url(img/unchecked.png);
   background-size: cover;
   background-position: center;
   top: 12px;
-  left: -30px;
+  left: -40px;
 }
 
-ul li.checked {
+.checked {
   color: #555;
   text-decoration: line-through;
 }
 
-ul li.checked::before {
+.checked::before {
   color: #555;
   background-image: url(img/checked.png);
 }
 
-ul li span.close {
+.edit {
   position: absolute;
-  right: -45px;
-  top: 0px;
-  width: 40px;
-  height: 43px;
-  color: #555;
-  line-height: 2.52em;
-  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  top: 12px;
+  right: -40px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
-ul li span:hover {
-  background: #edeef0;
+.edit:hover {
+  background-color: #0d75ec;
+}
+
+.delete {
+  position: absolute;
+  right: -80px;
+  top: 12px;
+  width: 35px;
+  height: 35px;
+  line-height: 2.5em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.delete:hover {
+  background-color: #f44336;
 }
